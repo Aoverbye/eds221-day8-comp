@@ -1,0 +1,6 @@
+---
+title: "EDS 221: day 8 interactive session"
+author: "Amanda Overbye"
+format: html
+editor: visual
+---
