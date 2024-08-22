@@ -1,0 +1,32 @@
+---
+title: "Table_examples"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: inline
+---
+```{r}
+rm(list = ls())
+```
+
+```{r}
+library("tidyverse")
+library("here")
+library("janitor")
+library("patchwork")
+library("here")
+library("kableExtra")
+library(palmerpenguins)
+```
+
+```{r}
+#mean body mass in grams
+#making it pretty ----
+#ITS A TABLE ----
+penguins |>
+  group_by(species, island) |>
+  summarise(mean_mass = mean(body_mass_g, na.rm = TRUE)) |>
+  kable(col.names = c("Species", "Island", "Body Mass (grams)")) |>
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+```
+
